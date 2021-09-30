@@ -13,9 +13,6 @@ app.get("/about", (req, res) => {
 app.get("/contact-me", (req, res) => {
   res.sendFile(path.join(__dirname, "public/contact-me.html"));
 });
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "public/404.html"));
-});
 app.listen(process.env.PORT || 8080, () => {
   console.log("Running!");
 });
